@@ -14,7 +14,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: #e6e6e6;
   color: #000035;
   font-weight: 300;
   font-size: 16px;
@@ -98,17 +97,47 @@ h3 {
   margin: 5em 0; }
   .work-sites__site {
     position: relative;
-    width: 49.98%;
-    padding: 10px;
-    overflow: hidden; }
+    width: calc(49% - 21px);
+    margin: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0px 0px 23px -10px black; }
+    .work-sites__site span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 100;
+      padding: 15px;
+      opacity: 0;
+      color: white;
+      transition: 300ms; }
     .work-sites__site:hover a {
       transform: scale(1.14); }
+    .work-sites__site:hover span {
+      opacity: 1; }
+    .work-sites__site:hover:before {
+      opacity: 1; }
+    @media only screen and (max-width: 500px) {
+      .work-sites__site {
+        width: 100%; } }
+    .work-sites__site:before {
+      content: '';
+      position: absolute;
+      z-index: 50;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      opacity: 0;
+      transition: 300ms; }
   .work-sites a {
     display: block;
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
-    text-indent: -9999px;
     transition: 300ms; }
     .work-sites a:before {
       content: "";

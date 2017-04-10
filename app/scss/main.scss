@@ -6,7 +6,7 @@
 /*------------------------------------*\
     ::Variables
 \*------------------------------------*/
-$color-lgray: #e6e6e6;
+$color-lgray: #eeeeee;
 $color-dgray: #1a1a1a;
 $color-dblue: #000035;
 
@@ -22,7 +22,6 @@ html {
 body {
 	margin: 0;
 	padding: 0;
-    background: $color-lgray;
     color: $color-dblue;
     font-weight: 300;
     font-size: 16px;
@@ -128,13 +127,48 @@ h3{@extend %h3;}
 	margin: 5em 0;
 	&__site{
 		position: relative;
-		width: 49.98%;
-		padding: 10px;
+		width: calc(49% - 21px);
+		margin: 10px;
 		overflow: hidden;
+		cursor: pointer;
+		box-shadow: 0px 0px 23px -10px black;
+		span{
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 100;
+			padding: 15px;
+			opacity: 0;
+			color: white;
+			transition: 300ms;
+		}
 		&:hover{
 			a{
 				transform: scale(1.14);
 			}
+			span{
+				opacity: 1;
+			}
+			&:before{
+				opacity: 1;
+			}
+		}
+		@media only screen and (max-width: 500px) {
+			width: 100%;
+		}
+		&:before{
+			content: '';
+			position: absolute;
+			z-index: 50;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(black, 0.7);
+			opacity: 0;
+			transition: 300ms;
 		}
 	}
 	a{
@@ -142,7 +176,6 @@ h3{@extend %h3;}
 		background-position: top center;
 		background-size: cover;
 		background-repeat: no-repeat;
-		text-indent: -9999px;
 		transition: 300ms;
 		&:before {
 			content: "";

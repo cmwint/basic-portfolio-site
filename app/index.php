@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Corinne Winthrop | Resume and Portfolio Site</title>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
     <!--build:css css/styles.min.css-->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
@@ -53,34 +54,28 @@
 
             <div class="main__work work-sites">
                 <div class="work-sites__site">
-                    <a href="https://www.rhdivorce.com/" style="background-image:url('images/rhdivorce.png');"  target="_blank">
-                        Robinson & Henry Family Law Divorce Site
-                    </a>
+                    <span>Robinson & Henry Family Law Divorce Site</span>
+                    <a href="https://www.rhdivorce.com/" style="background-image:url('images/rhdivorce.png');"  target="_blank"> </a>
                 </div>
                 <div class="work-sites__site">
-                    <a href="http://www.graebel.com/" style="background-image:url('images/graebel.png');" target="_blank">
-                        Graebel International & Relocation Mobility Services
-                    </a>
+                    <span>Graebel International & Relocation Mobility Services</span>
+                    <a href="http://www.graebel.com/" style="background-image:url('images/graebel.png');" target="_blank"> </a>
                 </div>
                 <div class="work-sites__site">
-                    <a href="http://www.elward.com/" style="background-image:url('images/elward.png');" target="_blank">
-                        Elward Corporations, wall paneling systems
-                    </a>
+                    <span>Elward Corporations, wall paneling systems</span>
+                    <a href="http://www.elward.com/" style="background-image:url('images/elward.png');" target="_blank"> </a>
                 </div>
                 <div class="work-sites__site">
-                    <a href="http://www.hrqinc.com/" style="background-image:url('images/hrq.png');" target="_blank">
-                        hrQ, HR consulting
-                    </a>
+                    <span>hrQ, HR consulting</span>
+                    <a href="http://www.hrqinc.com/" style="background-image:url('images/hrq.png');" target="_blank"> </a>
                 </div>
                 <div class="work-sites__site">
-                    <a href="http://www.baerdental.com/" style="background-image:url('images/baerdental.png');" target="_blank">
-                        Baer Dental Aurora Dentist
-                    </a>
+                    <span>Baer Dental Aurora Dentist</span>
+                    <a href="http://www.baerdental.com/" style="background-image:url('images/baerdental.png');" target="_blank"> </a>
                 </div>
                 <div class="work-sites__site">
-                    <a href="http://www.coloradoinnovationnetwork.com/" style="background-image:url('images/coin.png');" target="_blank">
-                        Colorado Innovation Network
-                    </a>
+                    <span>Colorado Innovation Network</span>
+                    <a href="http://www.coloradoinnovationnetwork.com/" style="background-image:url('images/coin.png');" target="_blank"> </a>
                 </div>
             </div>
         </div>
