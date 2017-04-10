@@ -1,0 +1,121 @@
+/*------------------------------------*\
+    ::Font
+\*------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700');
+
+/*------------------------------------*\
+    ::Variables
+\*------------------------------------*/
+$color-lgray: #e6e6e6;
+$color-dgray: #1a1a1a;
+$color-dblue: #000035;
+
+/*------------------------------------*\
+    ::Base
+\*------------------------------------*/
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+html {
+	font-family: 'Roboto', sans-serif;
+}
+body {
+	margin: 0;
+	padding: 0;
+    background: $color-lgray;
+    color: $color-dblue;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: .02em;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/*------------------------------------*\
+    ::Headings
+\*------------------------------------*/
+%all-headings {
+    font-weight: 400;
+    color: $color-dblue;
+    margin: 0.25em 0;
+}
+%h1 {
+    @extend %all-headings;
+    font-weight: 700;
+    font-size: 60px;
+    margin-bottom: 0;
+}
+%h2 {
+    @extend %all-headings;
+    font-size: 24px;
+    margin-top: 0;
+}
+%h3 {
+    @extend %all-headings;
+    font-size: 19px;
+}
+// implementation
+h1{@extend %h1;}
+h2{@extend %h2;}
+h3{@extend %h3;}
+
+/*------------------------------------*\
+    ::Main
+\*------------------------------------*/
+.main{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	text-align: center;
+}
+
+/*------------------------------------*\
+    ::Contact Links
+\*------------------------------------*/
+.contact-links{
+	margin: 2em 0;
+	padding: 0;
+	list-style: none;
+	li{
+		display: inline-block;
+	}
+	a{
+		display: block;
+		width: 50px;
+		height: 50px;
+		margin: 0 10px;
+		border-radius: 50%;
+		border: 3px solid $color-dblue;
+		padding: 10px;
+		transition: border-color 400ms;
+		&:hover{
+			border-color: #45a247;
+			svg{
+				fill: #45a247;
+			}
+		}
+	}
+	span{
+		display: block;
+		text-indent: -9999px;
+	}
+	svg{
+		fill: $color-dblue;
+		width: 100%;
+		height: 100%;
+		transition: 400ms;
+	}
+}
+
+
+
+
+
+
+
+
+
