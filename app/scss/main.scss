@@ -43,9 +43,10 @@ img {
 }
 %h1 {
     @extend %all-headings;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1;
     font-size: 60px;
+    letter-spacing: -1px;
     margin-bottom: 0.2em;
 }
 %h2 {
