@@ -67,6 +67,11 @@ svg{
 	margin: auto;
 	padding: $pad;
 }
+[class*=__title]{
+	margin-top: 2em;
+	font-weight: bold;
+	color: $color-1;
+}
 /*------------------------------------*\
     ::Header
 \*------------------------------------*/
@@ -153,9 +158,44 @@ svg{
 /*------------------------------------*\
     ::skils
 \*------------------------------------*/
+.skills{
+	&__wrap{
+		display: flex;
+	}
+	&__col{
+		width: 49.89%;
+	}
+}
 /*------------------------------------*\
     ::portfolio/experience
 \*------------------------------------*/
+.portfolio{
+	&__single{
+		display: flex;
+		margin: 2em 0;
+		padding: $pad 0 $pad*2;
+		border-bottom: 1px solid rgba($color-dgray, 0.18);
+		h3{
+			margin: 0;
+		}
+		p{
+			margin: 0.5em 0;
+		}
+	}
+	&__job{
+		width: 25%;
+	}
+	&__description{
+		width: 70%;
+		margin-left: auto;
+		h3{
+			margin-top: 1.5em;
+			&:first-of-type{
+				margin-top: 0;
+			}
+		}
+	}
+}
 /*------------------------------------*\
     ::pocket feed
 \*------------------------------------*/

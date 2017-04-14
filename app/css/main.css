@@ -46,6 +46,11 @@ h1, h2, h3, h4, h5, h6 {
   margin: auto;
   padding: 0.9375rem; }
 
+[class*=__title] {
+  margin-top: 2em;
+  font-weight: bold;
+  color: #31634A; }
+
 /*------------------------------------*    ::Header
 \*------------------------------------*/
 .main-head {
@@ -112,7 +117,34 @@ h1, h2, h3, h4, h5, h6 {
 
 /*------------------------------------*    ::skils
 \*------------------------------------*/
+.skills__wrap {
+  display: flex; }
+
+.skills__col {
+  width: 49.89%; }
+
 /*------------------------------------*    ::portfolio/experience
 \*------------------------------------*/
+.portfolio__single {
+  display: flex;
+  margin: 2em 0;
+  padding: 0.9375rem 0 1.875rem;
+  border-bottom: 1px solid rgba(47, 47, 47, 0.18); }
+  .portfolio__single h3 {
+    margin: 0; }
+  .portfolio__single p {
+    margin: 0.5em 0; }
+
+.portfolio__job {
+  width: 25%; }
+
+.portfolio__description {
+  width: 70%;
+  margin-left: auto; }
+  .portfolio__description h3 {
+    margin-top: 1.5em; }
+    .portfolio__description h3:first-of-type {
+      margin-top: 0; }
+
 /*------------------------------------*    ::pocket feed
 \*------------------------------------*/
