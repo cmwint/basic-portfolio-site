@@ -7,8 +7,11 @@
     ::Variables
 \*------------------------------------*/
 $color-lgray: #eeeeee;
-$color-dgray: #1a1a1a;
-$color-dblue: #000035;
+$color-dgray: #2F2F2F;
+$color-1: #31634A;
+$color-2: #449363;
+
+$pad:       0.9375rem;
 
 /*------------------------------------*\
     ::Base
@@ -22,171 +25,137 @@ html {
 body {
 	margin: 0;
 	padding: 0;
-    color: $color-dblue;
+    color: $color-dgray;
     font-weight: 300;
     font-size: 16px;
     line-height: 1.4;
     letter-spacing: .02em;
 }
+a{
+	text-decoration: none;
+	color: $color-dgray;
+}
 img {
 	max-width: 100%;
 	height: auto;
+}
+svg{
+	width: 100px;
+	height: 100px;
 }
 
 /*------------------------------------*\
     ::Headings
 \*------------------------------------*/
-%all-headings {
-    font-weight: 400;
-    color: $color-dblue;
-    margin: 0.25em 0;
+%h-all {
+    font-weight: 100;
 }
-%h1 {
-    @extend %all-headings;
-    font-weight: 400;
-    line-height: 1;
-    font-size: 60px;
-    letter-spacing: -1px;
-    margin-bottom: 0.2em;
-}
-%h2 {
-    @extend %all-headings;
-    font-size: 24px;
-    margin-top: 0;
-}
-%h3 {
-    @extend %all-headings;
-    font-size: 19px;
-}
-// implementation
-h1{@extend %h1;}
-h2{@extend %h2;}
-h3{@extend %h3;}
+/*implement:*/%h1, %h2, %h3, %h4, %h5, %h6 { @extend %h-all; }
+%h1{}
+%h2 {}
+%h3 {}
+%h4 {}
+%h5 {}
+%h6 {}
+/*implement:*/h1{@extend %h1;}h2{@extend %h2;}h3{@extend %h3;}h4{@extend %h4;}h5{@extend %h5;}h6{@extend %h6;}
 
 /*------------------------------------*\
     ::Main
 \*------------------------------------*/
-.main{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	max-width: 700px;
+[class*=__inner]{
+	max-width: 1140px;
 	margin: auto;
-	&__wrap{
-		margin-top: 5em;
-	}
+	padding: $pad;
 }
-
 /*------------------------------------*\
-    ::Contact Links
+    ::Header
 \*------------------------------------*/
-.contact-links{
-	margin: 2em 0;
-	padding: 0;
-	list-style: none;
-	li{
-		display: inline-block;
-	}
-	a{
-		display: block;
-		width: 50px;
-		height: 50px;
-		margin: 0 10px;
-		border-radius: 50%;
-		border: 3px solid $color-dblue;
-		padding: 8px;
-		transition: border-color 400ms;
-		&:hover{
-			border-color: #45a247;
-			svg{
-				fill: #45a247;
-			}
-		}
-		@media only screen and (max-width: 500px) {
-			margin: 0 20px;
-		}
-	}
-	span{
-		display: block;
-		text-indent: -9999px;
-	}
-	svg{
-		fill: $color-dblue;
-		width: 100%;
+.main-head{
+	position: relative;
+	overflow: hidden;
+	background-color: $color-2;
+	color: white;
+	&:before{
+		content: '';
+		position: absolute;
+		z-index: 10;
+		top: 0;
+		left: 58%;
+		right: 0;
+		bottom: 0;
 		height: 100%;
-		transition: 400ms;
+		width: 42%;
+		background-color: $color-1;
 	}
-}
-
-/*------------------------------------*\
-    ::Work sites
-\*------------------------------------*/
-.work-sites{
-	display: flex;
-	flex-wrap: wrap;
-	margin: 5em 0;
-	&__site{
+	&:after{
+		content: 'corinne';
+		position: absolute;
+		z-index: 15;
+		left: 0;
+		right: 0;
+		bottom: -300px;
+		font-weight: bold;
+		color: darken($color-2, 10%);
+		opacity: 0.5;
+		font-size: 50vw;
+	}
+	&__inner{
 		position: relative;
-		width: calc(49% - 21px);
-		margin: 10px;
-		overflow: hidden;
-		cursor: pointer;
-		box-shadow: 0px 0px 23px -10px black;
-		span{
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			z-index: 100;
-			padding: 15px;
-			opacity: 0;
+		z-index: 20;
+	}
+	&__nav{
+		a{
+			position: relative;
+			display: inline-block;
+			margin: $pad/2;
+			padding: $pad/2;
 			color: white;
-			transition: 300ms;
-		}
-		&:hover{
-			a{
-				transform: scale(1.14);
+			&:first-child{
+				margin-left: 0;
+				padding-left: 0;
 			}
-			span{
-				opacity: 1;
+			&:before,
+			&:after{
+				content: '';
+				position: absolute;
+				height: 1px;
+				width: 0px;
+				background-color: white;
+				transition: 250ms;
 			}
 			&:before{
-				opacity: 1;
+				top: 0;
+				left: 0;
+			}
+			&:after{
+				bottom: 0;
+				right: 0;
+			}
+			&:hover{
+				&:before,
+				&:after{
+					width: 100%;
+				}
 			}
 		}
-		@media only screen and (max-width: 500px) {
-			width: 100%;
-		}
-		&:before{
-			content: '';
-			position: absolute;
-			z-index: 50;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			background-color: rgba(black, 0.7);
-			opacity: 0;
-			transition: 300ms;
-		}
 	}
-	a{
-		display: block;
-		background-position: top center;
-		background-size: cover;
-		background-repeat: no-repeat;
-		transition: 300ms;
-		&:before {
-			content: "";
-			float: left;
-			padding-bottom: 50%;
+	&__intro{
+		width: 50%;
+		margin: 7em 0 6em;
+		h2{
+			font-weight: normal;
 		}
-		&:after {
-			content: "";
-			display: table;
-			clear: both;
+		h3{
+			font-weight: normal;
 		}
 	}
 }
+/*------------------------------------*\
+    ::skils
+\*------------------------------------*/
+/*------------------------------------*\
+    ::portfolio/experience
+\*------------------------------------*/
+/*------------------------------------*\
+    ::pocket feed
+\*------------------------------------*/
