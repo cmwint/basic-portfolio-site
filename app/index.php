@@ -70,16 +70,29 @@
                                     <h3>Senior Front-end Web Developer</h3>
                                     <p>Led the development team in weekly code reviews, team meetings, and innovative front-end practices to keep the team moving forward</p>
                                     <p>Mentored junior front-end web developers and assisted with code problems</p>
+                                    <div class="portfolio__example">
+                                        <a href="https://www.rhdivorce.com/" target="_blank">Robinson & Henry Divorce Lawyers</a>
+                                        <a href="http://www.graebel.com/" target="_blank">Graebel Companies, Inc.</a>
+                                    </div>
 
                                     <h3>Front-end Web Developer</h3>
                                     <p>Built custom WordPress sites from the ground up with a bare-bones theme</p>
                                     <p>Developed a WordPress plugin to easily integrate social media feeds using the Facebook, Instagram, Twitter and Linkedin APIs</p>
                                     <p>Researched front-end performance measures and how to improve them within WordPress websites</p>
-                                    <p>Worked with many CRM systems to integrate client forms and work ows with their websites</p>
+                                    <p>Worked with many CRM systems to integrate client forms and workflows with their websites</p>
+                                    <div class="portfolio__example">
+                                        <a href="http://www.elward.com/" target="_blank">Elward Systems Corporation</a>
+                                        <a href="http://www.hrqinc.com/" target="_blank">hrQ Inc.</a>
+                                        <a href="http://www.coloradoinnovationnetwork.com/" target="_blank">Colorado Innovation Network</a>
+                                    </div>
 
                                     <h3>Intern</h3>
                                     <p>Devloped and maintained WordPress websites while managing their databases</p>
                                     <p>Amplified skills in git, command line tools, PHP, SASS and JavaScript libraries</p>
+                                    <div class="portfolio__example">
+                                        <a href="http://www.baerdental.com/" target="_blank">Baer Dental</a>
+                                        <a href="http://www.bonesdenver.com/" target="_blank">Bones Denver</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="portfolio__single">
@@ -98,6 +111,9 @@
                                 </div>
                                 <div class="portfolio__description">
                                     <h3>Web Development with Javascript Foundations</h3>
+                                    <div class="portfolio__example">
+                                        <a href="https://codepen.io/cwint/pen/jqdaLZ" target="_blank">Tic-Tac-Code game</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="portfolio__single">
@@ -121,6 +137,10 @@
                                     <h3>Editorial Design co-op</h3>
                                     <p>Gained digital interactive design and development fundamentals from professional developers in the field</p>
                                     <p>Designed sports graphics weekly from a set of data and photos to create data visualizations, while collaborating with veteran sports editors and established writers in the media industry</p>
+                                    <div class="portfolio__example">
+                                        <a href="https://codepen.io/cwint/pen/jqdaLZ" target="_blank">News design website</a>
+                                        <a href="https://codepen.io/cwint/pen/jqdaLZ" target="_blank">Data visualizations</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="portfolio__single">
@@ -130,7 +150,7 @@
                                 </div>
                                 <div class="portfolio__description">
                                     <h3>Journalism major</h3>
-                                    <p>Minor Information Science & Technology</p>
+                                    <p>Information Science & Technology minor</p>
                                 </div>
                             </div>
                         </div>
@@ -139,11 +159,19 @@
                         <h2 class="pocket-feed__title">
                             what I'm reading
                         </h2>
+                        <div class="pocket-feed__wrap">
+                            pock stuff will go here!
+                        </div>
                     </article>
                     <article id="learning" class="main-torso__group skills">
                         <h2 class="skills__title">
-                            what I've learning
+                            what I'm learning
                         </h2>
+                        <div class="skills__wrap">
+                            <div class="skills__col">
+                                react, ember, css stuff, 
+                            </div>
+                        </div>
                     </article>
                 </div>
 

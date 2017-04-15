@@ -131,9 +131,10 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0.9375rem 0 1.875rem;
   border-bottom: 1px solid rgba(47, 47, 47, 0.18); }
   .portfolio__single h3 {
-    margin: 0; }
+    margin: 0;
+    font-weight: 400; }
   .portfolio__single p {
-    margin: 0.5em 0; }
+    margin: 0.75em 0; }
 
 .portfolio__job {
   width: 25%; }
@@ -145,6 +146,16 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 1.5em; }
     .portfolio__description h3:first-of-type {
       margin-top: 0; }
+
+.portfolio__example a {
+  display: inline-block;
+  padding: 8px;
+  background-color: #31634A;
+  margin: 0.5em 0;
+  color: white;
+  transition: 200ms; }
+  .portfolio__example a:hover {
+    background-color: #449363; }
 
 /*------------------------------------*    ::pocket feed
 \*------------------------------------*/
