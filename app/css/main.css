@@ -141,7 +141,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .portfolio__description {
   width: 70%;
-  margin-left: auto; }
+  margin-left: auto;
+  margin-right: 50px; }
   .portfolio__description h3 {
     margin-top: 1.5em; }
     .portfolio__description h3:first-of-type {
@@ -151,11 +152,89 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   padding: 8px;
   background-color: #31634A;
-  margin: 0.5em 0;
+  margin: 0.5em 0.5em 0 0;
   color: white;
   transition: 200ms; }
   .portfolio__example a:hover {
     background-color: #449363; }
+  .portfolio__example a.march-madness {
+    position: relative; }
+    .portfolio__example a.march-madness:before {
+      content: '';
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      right: 0;
+      display: block;
+      width: 0;
+      height: 0;
+      margin: auto;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      border-top: 12px solid #449363;
+      opacity: 0;
+      transform: translateY(15px);
+      transition: 300ms; }
+    .portfolio__example a.march-madness:after {
+      content: 'My coworker thought he could beat me in the office March Madness bracket. Here\'s how it turned out.';
+      position: absolute;
+      bottom: calc(100% + 10px);
+      left: -50%;
+      right: -50%;
+      display: block;
+      width: 250px;
+      margin: 0 auto;
+      padding: 8px;
+      text-align: center;
+      font-size: 86%;
+      opacity: 0;
+      transform: translateY(15px);
+      transition: 300ms;
+      background-color: #449363; }
+    .portfolio__example a.march-madness:hover:before, .portfolio__example a.march-madness:hover:after {
+      opacity: 1;
+      transform: translateY(0px); }
 
 /*------------------------------------*    ::pocket feed
 \*------------------------------------*/
+/*------------------------------------*    ::footer
+\*------------------------------------*/
+.main-foot {
+  background-color: #31634A;
+  color: white;
+  margin-top: 2em;
+  padding: 2em 0 3.5em; }
+
+.contact__blurb {
+  margin: 2em 0; }
+  .contact__blurb a {
+    position: relative;
+    color: #9ed2b2; }
+    .contact__blurb a:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 0;
+      height: 1px;
+      transition: 200ms;
+      background-color: #9ed2b2; }
+    .contact__blurb a:hover:after {
+      width: 100%; }
+
+.contact__links a {
+  display: inline-block;
+  margin: 0 0.5em;
+  padding: 5px; }
+  .contact__links a:hover svg {
+    fill: #9ed2b2; }
+
+.contact__links svg {
+  fill: white;
+  width: 30px;
+  height: 30px;
+  transition: 300ms; }
+
+.contact__links span {
+  display: inline-block;
+  text-indent: -9999px; }
