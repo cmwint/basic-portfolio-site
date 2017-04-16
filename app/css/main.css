@@ -3,6 +3,8 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700");
 /*------------------------------------*    ::Variables
 \*------------------------------------*/
+/*------------------------------------*    ::Breakpoints
+\*------------------------------------*/
 /*------------------------------------*    ::Base
 \*------------------------------------*/
 *, *:before, *:after {
@@ -114,6 +116,15 @@ h1, h2, h3, h4, h5, h6 {
       font-weight: normal; }
     .main-head__intro h3 {
       font-weight: normal; }
+  @media only screen and (max-width: 800px) {
+    .main-head:after {
+      bottom: -200px; }
+    .main-head__intro {
+      width: 90%;
+      margin: 4em 0 3em; } }
+  @media only screen and (max-width: 520px) {
+    .main-head:after {
+      bottom: -100px; } }
 
 /*------------------------------------*    ::skils
 \*------------------------------------*/
@@ -122,6 +133,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .skills__col {
   width: 49.89%; }
+
+@media only screen and (max-width: 800px) {
+  .skills__wrap {
+    flex-wrap: wrap; }
+  .skills__col {
+    width: 100%; } }
 
 /*------------------------------------*    ::portfolio/experience
 \*------------------------------------*/
@@ -137,7 +154,12 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0.75em 0; }
 
 .portfolio__job {
-  width: 25%; }
+  width: 25%;
+  padding-right: 20px; }
+  .portfolio__job span {
+    display: block;
+    font-size: 90%;
+    font-style: italic; }
 
 .portfolio__description {
   width: 70%;
@@ -194,6 +216,22 @@ h1, h2, h3, h4, h5, h6 {
     .portfolio__example a.march-madness:hover:before, .portfolio__example a.march-madness:hover:after {
       opacity: 1;
       transform: translateY(0px); }
+
+@media only screen and (max-width: 800px) {
+  .portfolio__single {
+    flex-wrap: wrap; }
+  .portfolio__job {
+    width: 100%; }
+  .portfolio__description {
+    width: 100%; }
+    .portfolio__description h3 {
+      margin-top: 1.5em; }
+      .portfolio__description h3:first-of-type {
+        margin-top: 1.5em; }
+  .portfolio__example a.march-madness:after {
+    left: 0;
+    right: 0;
+    width: 150px; } }
 
 /*------------------------------------*    ::pocket feed
 \*------------------------------------*/

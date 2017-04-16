@@ -13,6 +13,30 @@ $color-2: #449363;
 
 $pad:       0.9375rem;
 
+@mixin bp($media: false, $min: false, $max: false) {
+    @if $media {
+        @media only screen and (max-width: $media) { @content; }
+    }
+    @else if $min and $max {
+        @media only screen and (min-width: $min) and (max-width: $max) { @content; }
+    }
+    @else if $min {
+        @media only screen and (min-width: $min) { @content; }
+    }
+    @else if $max {
+        @media only screen and (max-width: $max) { @content; }
+    }
+
+}
+
+/*------------------------------------*\
+    ::Breakpoints
+\*------------------------------------*/
+$galaxy:        1140px;
+$solarsystem:   1024px;
+$interstellar:  800px;
+$planetary:     520px;
+
 /*------------------------------------*\
     ::Base
 \*------------------------------------*/
@@ -154,6 +178,20 @@ svg{
 			font-weight: normal;
 		}
 	}
+	@include bp($interstellar){
+		&:after{
+			bottom: -200px;
+		}
+		&__intro{
+			width: 90%;
+			margin: 4em 0 3em;
+		}
+	}
+	@include bp($planetary){
+		&:after{
+			bottom: -100px;
+		}
+	}
 }
 /*------------------------------------*\
     ::skils
@@ -164,6 +202,14 @@ svg{
 	}
 	&__col{
 		width: 49.89%;
+	}
+	@include bp($interstellar) {
+		&__wrap{
+			flex-wrap: wrap;
+		}
+		&__col{
+			width: 100%;
+		}
 	}
 }
 /*------------------------------------*\
@@ -185,6 +231,12 @@ svg{
 	}
 	&__job{
 		width: 25%;
+		padding-right: 20px;
+		span{
+			display: block;
+			font-size: 90%;
+			font-style: italic;
+		}
 	}
 	&__description{
 		width: 70%;
@@ -249,6 +301,34 @@ svg{
 					&:after{
 						opacity: 1;
 						transform: translateY(0px);
+					}
+				}
+			}
+		}
+	}
+	@include bp($interstellar) {
+		&__single{
+			flex-wrap: wrap;
+		}
+		&__job{
+			width: 100%;
+		}
+		&__description{
+			width: 100%;
+			h3{
+				margin-top: 1.5em;
+				&:first-of-type{
+					margin-top: 1.5em;
+				}
+			}
+		}
+		&__example{
+			a{
+				&.march-madness{
+					&:after{
+						left: 0;
+						right: 0;
+						width: 150px;
 					}
 				}
 			}
