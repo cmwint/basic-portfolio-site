@@ -139,7 +139,9 @@ h1, h2, h3, h4, h5, h6 {
         position: fixed;
         z-index: -1;
         width: 100%;
-        background-color: #449363; } }
+        background-color: #449363; }
+        .main-head__menu.sticky .main-head__nav a {
+          margin: 0 0.5em; } }
   @media only screen and (max-width: 800px) {
     .main-head {
       /*------------------------------------*		    ::Nav in the Header - Tablet
@@ -162,7 +164,7 @@ h1, h2, h3, h4, h5, h6 {
         overflow-x: hidden;
         position: fixed;
         z-index: 200;
-        top: 53px;
+        top: 54px;
         right: 0;
         left: 0;
         -webkit-transform: translateX(100%);
@@ -380,6 +382,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /*------------------------------------*    ::pocket feed
 \*------------------------------------*/
+.pocket-feed__wrap a {
+  color: #449363;
+  transition: 200ms; }
+  .pocket-feed__wrap a:hover {
+    color: #31634A; }
+
 /*------------------------------------*    ::footer
 \*------------------------------------*/
 .main-foot {

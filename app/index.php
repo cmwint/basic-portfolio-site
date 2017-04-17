@@ -171,7 +171,15 @@
                             what I'm reading
                         </h2>
                         <div class="pocket-feed__wrap">
-                            pock stuff will go here!
+                            <p>
+                                <a href="https://play.google.com/store/books/details?id=rorlAwAAQBAJ" target="_blank">Principles of Object-Oriented JavaScript</a>, Nicholas C. Zakas 
+                            </p>
+                            <p>
+                                <a href="https://www.smashingmagazine.com/2016/12/front-end-performance-checklist-2017-pdf-pages/">Front-end Performance Checklist</a>, Smashing Magazine
+                            </p>
+                            <p>
+                                <a href="http://mrmrs.io/writing/2016/03/24/scalable-css/">CSS and Scalability</a>
+                            </p>
                         </div>
                     </article>
                     <article id="learning" class="main-torso__group skills">

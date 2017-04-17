@@ -22,13 +22,12 @@ var clickable = function($el, stopProp){
 \*------------------------------------*/
 var mobile = function(){
     var $trigger = $('#js-trigger');
-    clickable($trigger); // defined in scripts-src/_interactive.js
-    $trigger.on('click', function(){
-        $('body, html').toggleClass('locked');
-    });
-    $('#menu-header-menu').on('click', 'a', function(){
-        $trigger.removeClass('active');
-        $('body, html').removeClass('locked');
+    clickable($trigger);
+    $('.main-head__menu').on('click', function(){
+    	var $nav = $(this).find('nav a');
+    	$nav.on('click', function(){
+	        $trigger.removeClass('active');
+    	});
     });
 };
 jQuery(function($){
@@ -44,7 +43,6 @@ var navPopup = function(){
     window.heroTimer = null;
 
     var navHidden = function(){
-    	console.log('hello');
         if($window.width() > 800){
             var heroHeight = $('.main-head').height() - 300;
             $window.scroll(function(){

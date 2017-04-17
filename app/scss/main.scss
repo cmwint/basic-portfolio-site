@@ -205,6 +205,11 @@ svg{
 				z-index: -1;
 				width: 100%;
 				background-color: $color-2;
+				.main-head__nav{
+					a{
+						margin: 0 0.5em;
+					}
+				}
 			}
 		}
 	}
@@ -231,7 +236,7 @@ svg{
 	        overflow-x: hidden;
 	        position: fixed;
 	        z-index: 200;
-	        top: 53px;
+	        top: 54px;
 	        right: 0;
 	        left: 0;
 	        transform: translateX(100%);
@@ -482,7 +487,17 @@ svg{
 /*------------------------------------*\
     ::pocket feed
 \*------------------------------------*/
-
+.pocket-feed{
+	&__wrap{
+		a{
+			color: $color-2;
+			transition: 200ms;
+			&:hover{
+				color: $color-1;
+			}
+		}
+	}
+}
 /*------------------------------------*\
     ::footer
 \*------------------------------------*/
