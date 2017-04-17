@@ -57,31 +57,40 @@ h1, h2, h3, h4, h5, h6 {
 \*------------------------------------*/
 .main-head {
   position: relative;
-  overflow: hidden;
-  background-color: #449363;
-  color: white; }
-  .main-head:before {
-    content: '';
+  z-index: 10; }
+  .main-head__intro {
+    position: relative;
+    overflow: hidden;
+    background-color: #449363;
+    color: white; }
+    .main-head__intro:before {
+      content: '';
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      left: 58%;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      width: 42%;
+      background-color: #31634A; }
+    .main-head__intro:after {
+      content: 'corinne';
+      position: absolute;
+      z-index: 15;
+      left: 0;
+      right: 0;
+      bottom: -300px;
+      font-weight: bold;
+      color: #34704c;
+      opacity: 0.5;
+      font-size: 50vw; }
+  .main-head__menu {
     position: absolute;
-    z-index: 10;
     top: 0;
-    left: 58%;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    width: 42%;
-    background-color: #31634A; }
-  .main-head:after {
-    content: 'corinne';
-    position: absolute;
-    z-index: 15;
     left: 0;
     right: 0;
-    bottom: -300px;
-    font-weight: bold;
-    color: #34704c;
-    opacity: 0.5;
-    font-size: 50vw; }
+    width: 100%; }
   .main-head__inner {
     position: relative;
     z-index: 20; }
@@ -115,13 +124,22 @@ h1, h2, h3, h4, h5, h6 {
         right: 0; }
       .main-head__nav a:hover:before, .main-head__nav a:hover:after {
         width: 100%; }
-  .main-head__intro {
+  .main-head__text {
     width: 50%;
-    margin: 7em 0 6em; }
-    .main-head__intro h2 {
+    margin: 11em 0 6em; }
+    .main-head__text h2 {
       font-weight: normal; }
-    .main-head__intro h3 {
+    .main-head__text h3 {
       font-weight: normal; }
+  @media only screen and (min-width: 800px) {
+    .main-head {
+      /*------------------------------------*		    ::Nav in the Header - Sticky
+		\*------------------------------------*/ }
+      .main-head__menu.sticky {
+        position: fixed;
+        z-index: -1;
+        width: 100%;
+        background-color: #449363; } }
   @media only screen and (max-width: 800px) {
     .main-head {
       /*------------------------------------*		    ::Nav in the Header - Tablet
@@ -130,7 +148,7 @@ h1, h2, h3, h4, h5, h6 {
 		\*------------------------------------*/ }
       .main-head:after {
         bottom: -200px; }
-      .main-head__intro {
+      .main-head__text {
         width: 90%;
         margin: 6em 0 3em; }
       .main-head__menu {
@@ -150,19 +168,17 @@ h1, h2, h3, h4, h5, h6 {
         -webkit-transform: translateX(100%);
                 transform: translateX(100%);
         bottom: 0;
-        background-color: rgba(68, 147, 99, 0.86);
+        background-color: rgba(68, 147, 99, 0.9);
         transition: 300ms;
-        padding-top: 3em; }
+        padding-top: 2em; }
         .main-head__nav a {
           display: block;
-          margin: 0.5em 20%;
+          margin: 0.5em 0;
           padding: 0.5em;
-          text-align: center;
+          width: 60%;
           font-size: 130%; }
           .main-head__nav a:first-child {
-            margin-left: 20%;
-            padding: 0.5em;
-            padding-left: 0; }
+            padding: 0.5em; }
           .main-head__nav a:before, .main-head__nav a:after {
             transition: 400ms; }
       .main-head__trigger {

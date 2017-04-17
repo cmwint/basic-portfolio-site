@@ -26,12 +26,14 @@
                         <a href="#contact">contact</a>
                     </nav>
                 </div>
-                <div class="main-head__inner">
-                    <div class="main-head__intro">
-                        <h2>Hi, I'm Corinne. So glad you made it to my portfolio site!</h2>
-                        <h3>I'm a front-end web engineer who enjoys writing organized code, laughing at cat pictures, and making a usable internet.</h3>
-                        <h4>I'm a quick learner, something else about me here, hi hello this is osmething more that I can fill in content later for this section hello</h4>
-                        <h4>And another paragraph here about why I'm so great and you should hire me please pretty please with ice cream on top.</h4>
+                <div class="main-head__intro">
+                    <div class="main-head__inner">
+                        <div class="main-head__text">
+                            <h2>Hi, I'm Corinne. So glad you made it to my portfolio site!</h2>
+                            <h3>I'm a front-end web engineer who enjoys writing organized code, laughing at cat pictures, and making a usable internet.</h3>
+                            <h4>I'm a quick learner, something else about me here, hi hello this is osmething more that I can fill in content later for this section hello</h4>
+                            <h4>And another paragraph here about why I'm so great and you should hire me please pretty please with ice cream on top.</h4>
+                        </div>
                     </div>
                 </div>
             </header>
