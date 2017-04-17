@@ -184,7 +184,7 @@
                 <div class="main-foot__inner">
                     <div id="contact" class="main-foot__contact contact">
                         <div class="contact__blurb">
-                            Please <a href="images/Corinne_Winthrop_Resume.pdf" target="_blank">download my resume</a>, or contact me another way!
+                            Please <a href="images/Corinne_Winthrop_Resume.pdf" target="_blank">download my resume</a>. Let's get in touch!
                         </div>
                         <div class="contact__links">
                             <a href="https://www.linkedin.com/in/corinnewinthrop/" target="_blank" title="LinkedIn">

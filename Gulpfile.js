@@ -10,38 +10,34 @@ var cssnano = require('gulp-cssnano');
 var del = require('del');
 var runSequence = require('run-sequence');
 
-// Basic Gulp task syntax
-// gulp.task('hello', function() {
-//   console.log('Hello Zell!');
-// })
 
 // Development Tasks 
 // -----------------
 
 // Start browserSync server
 gulp.task('browserSync', function() {
-
     var url = 'http://localhost:8888/sites/basic-portfolio-site/app';
     browserSync.init({
         proxy: url
-    })
-
-
-  // browserSync({
-  //   server: {
-  //     baseDir: 'app'
-  //   }
-  // })
+    });
 })
 
 gulp.task('sass', function() {
   return gulp.src('app/scss/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
     .pipe(sass().on('error', sass.logError)) // Passes it through a gulp-sass, log errors to console
+    .pipe(autoprefixer({
+        browsers: [
+            'last 2 versions',
+            'ie >= 10',
+            'Safari >= 7'
+        ]
+    }))
     .pipe(gulp.dest('app/css')) // Outputs it in the css folder
     .pipe(browserSync.reload({ // Reloading with Browser Sync
       stream: true
     }));
 })
+
 
 // Watchers
 gulp.task('watch', function() {
