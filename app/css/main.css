@@ -85,30 +85,36 @@ h1, h2, h3, h4, h5, h6 {
   .main-head__inner {
     position: relative;
     z-index: 20; }
-  .main-head__nav a {
+  .main-head__nav {
     position: relative;
-    display: inline-block;
-    margin: 0.46875rem;
-    padding: 0.46875rem;
-    color: white; }
-    .main-head__nav a:first-child {
-      margin-left: 0;
-      padding-left: 0; }
-    .main-head__nav a:before, .main-head__nav a:after {
-      content: '';
-      position: absolute;
-      height: 1px;
-      width: 0px;
-      background-color: white;
-      transition: 250ms; }
-    .main-head__nav a:before {
-      top: 0;
-      left: 0; }
-    .main-head__nav a:after {
-      bottom: 0;
-      right: 0; }
-    .main-head__nav a:hover:before, .main-head__nav a:hover:after {
-      width: 100%; }
+    z-index: 40;
+    max-width: 1140px;
+    margin: auto;
+    padding: 0.9375rem; }
+    .main-head__nav a {
+      position: relative;
+      display: inline-block;
+      margin: 0.46875rem;
+      padding: 0.46875rem;
+      color: white; }
+      .main-head__nav a:first-child {
+        margin-left: 0;
+        padding-left: 0; }
+      .main-head__nav a:before, .main-head__nav a:after {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 0px;
+        background-color: white;
+        transition: 250ms; }
+      .main-head__nav a:before {
+        top: 0;
+        left: 0; }
+      .main-head__nav a:after {
+        bottom: 0;
+        right: 0; }
+      .main-head__nav a:hover:before, .main-head__nav a:hover:after {
+        width: 100%; }
   .main-head__intro {
     width: 50%;
     margin: 7em 0 6em; }
@@ -117,16 +123,121 @@ h1, h2, h3, h4, h5, h6 {
     .main-head__intro h3 {
       font-weight: normal; }
   @media only screen and (max-width: 800px) {
-    .main-head:after {
-      bottom: -200px; }
-    .main-head__intro {
-      width: 90%;
-      margin: 4em 0 3em; } }
+    .main-head {
+      /*------------------------------------*		    ::Nav in the Header - Tablet
+		\*------------------------------------*/
+      /*------------------------------------*		    ::Nav in the Header - Trigger
+		\*------------------------------------*/ }
+      .main-head:after {
+        bottom: -200px; }
+      .main-head__intro {
+        width: 90%;
+        margin: 6em 0 3em; }
+      .main-head__menu {
+        position: fixed;
+        z-index: 100;
+        width: 100%;
+        box-shadow: 0px 0px 24px -10px black;
+        background-color: white; }
+      .main-head__nav {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        position: fixed;
+        z-index: 200;
+        top: 53px;
+        right: 0;
+        left: 0;
+        -webkit-transform: translateX(100%);
+                transform: translateX(100%);
+        bottom: 0;
+        background-color: rgba(68, 147, 99, 0.86);
+        transition: 300ms;
+        padding-top: 3em; }
+        .main-head__nav a {
+          display: block;
+          margin: 0.5em 20%;
+          padding: 0.5em;
+          text-align: center;
+          font-size: 130%; }
+          .main-head__nav a:first-child {
+            margin-left: 20%;
+            padding: 0.5em;
+            padding-left: 0; }
+          .main-head__nav a:before, .main-head__nav a:after {
+            transition: 400ms; }
+      .main-head__trigger {
+        display: inline-block;
+        position: relative;
+        height: 3em;
+        margin-left: auto;
+        padding: 1.5em 1.8em;
+        -webkit-align-self: center;
+            -ms-flex-item-align: center;
+                    -ms-grid-row-align: center;
+                align-self: center;
+        /*------------------------------------*	            ::When Triggered
+	        \*------------------------------------*/ }
+        .main-head__trigger span {
+          position: absolute;
+          z-index: 300;
+          top: 16px;
+          right: 5px;
+          display: block;
+          width: 42px;
+          height: 4px;
+          margin-top: -2px;
+          border-radius: 2px;
+          background-color: #449363;
+          transition: background-color 0s 0.15s linear; }
+          .main-head__trigger span:before, .main-head__trigger span:after {
+            position: absolute;
+            width: 42px;
+            height: 4px;
+            border-radius: 2px;
+            background-color: #449363;
+            transition-property: -webkit-transform;
+            transition-property: transform;
+            transition-property: transform, -webkit-transform;
+            transition-duration: 0.15s;
+            transition-timing-function: ease; }
+          .main-head__trigger span:before, .main-head__trigger span:after {
+            content: "";
+            display: block; }
+          .main-head__trigger span:before {
+            top: 10px;
+            transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), -webkit-transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+          .main-head__trigger span:after {
+            top: 20px;
+            transition: top 0.3s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), -webkit-transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            transition: top 0.3s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            transition: top 0.3s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+        .main-head__trigger.active span {
+          transition-delay: 0.32s;
+          background-color: transparent; }
+          .main-head__trigger.active span:before {
+            top: 0;
+            transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), -webkit-transform 0.15s 0.32s cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.15s 0.32s cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.15s 0.32s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.15s 0.32s cubic-bezier(0.215, 0.61, 0.355, 1);
+            -webkit-transform: translate3d(0, 10px, 0) rotate(45deg);
+                    transform: translate3d(0, 10px, 0) rotate(45deg); }
+          .main-head__trigger.active span:after {
+            top: 0;
+            transition: top 0.3s cubic-bezier(0.33333, 0, 0.66667, 0.33333), -webkit-transform 0.15s 0.32s cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition: top 0.3s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.15s 0.32s cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition: top 0.3s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.15s 0.32s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.15s 0.32s cubic-bezier(0.215, 0.61, 0.355, 1);
+            -webkit-transform: translate3d(0, 10px, 0) rotate(-45deg);
+                    transform: translate3d(0, 10px, 0) rotate(-45deg); }
+        .main-head__trigger.active + .main-head__nav {
+          -webkit-transform: translateX(0);
+                  transform: translateX(0); } }
   @media only screen and (max-width: 520px) {
     .main-head:after {
       bottom: -100px; } }
 
-/*------------------------------------*    ::skils
+/*------------------------------------*    ::skills
 \*------------------------------------*/
 .skills__wrap {
   display: -webkit-flex;

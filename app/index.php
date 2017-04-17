@@ -14,7 +14,10 @@
 
     <div class="wrap-all-the-things">
             <header class="main-head">
-                <div class="main-head__inner">
+                <div class="main-head__menu">
+                    <a href="javascript:void(0);" id="js-trigger" class="main-head__trigger" aria-label="Activate navigation">
+                        <span></span>
+                    </a>
                     <nav class="main-head__nav">
                         <a href="#skills">what I know</a>
                         <a href="#experience">what I've done</a>
@@ -22,6 +25,8 @@
                         <a href="#learning">what I'm learning</a>
                         <a href="#contact">contact</a>
                     </nav>
+                </div>
+                <div class="main-head__inner">
                     <div class="main-head__intro">
                         <h2>Hi, I'm Corinne. So glad you made it to my portfolio site!</h2>
                         <h3>I'm a front-end web engineer who enjoys writing organized code, laughing at cat pictures, and making a usable internet.</h3>

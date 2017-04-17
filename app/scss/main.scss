@@ -96,6 +96,7 @@ svg{
 	font-weight: bold;
 	color: $color-1;
 }
+
 /*------------------------------------*\
     ::Header
 \*------------------------------------*/
@@ -133,6 +134,11 @@ svg{
 		z-index: 20;
 	}
 	&__nav{
+		position: relative;
+		z-index: 40;
+		max-width: 1140px;
+		margin: auto;
+		padding: $pad;
 		a{
 			position: relative;
 			display: inline-block;
@@ -184,8 +190,121 @@ svg{
 		}
 		&__intro{
 			width: 90%;
-			margin: 4em 0 3em;
+			margin: 6em 0 3em;
 		}
+		/*------------------------------------*\
+		    ::Nav in the Header - Tablet
+		\*------------------------------------*/
+	    &__menu{
+		    position: fixed;
+		    z-index: 100;
+		    width: 100%;
+		    box-shadow: 0px 0px 24px -10px black;
+		    background-color: white;
+	    }
+	    &__nav{
+	        overflow-y: scroll;
+	        overflow-x: hidden;
+	        position: fixed;
+	        z-index: 200;
+	        top: 53px;
+	        right: 0;
+	        left: 0;
+	        transform: translateX(100%);
+	        bottom: 0;
+	        background-color: rgba($color-2, 0.86);
+	        transition: 300ms;
+	        padding-top: 3em;
+	        a{
+	            display: block;
+	            margin: 0.5em 20%;
+	            padding: 0.5em;
+	            text-align: center;
+	            font-size: 130%;
+	            &:first-child{
+					margin-left: 20%;
+	            	padding: 0.5em;
+					padding-left: 0;
+				}
+	            &:before,
+				&:after{
+					transition: 400ms;
+				}
+	        }
+	    }
+
+		/*------------------------------------*\
+		    ::Nav in the Header - Trigger
+		\*------------------------------------*/
+	    &__trigger{
+	        display: inline-block;
+	        position: relative;
+	        height: 3em;
+	        margin-left: auto;
+	        padding: 1.5em 1.8em;
+	        align-self: center;
+	        span {
+	            position: absolute;
+	            z-index: 300;
+	            top: 16px;
+	            right: 5px;
+	            display: block;
+	            width: 42px;
+	            height: 4px;
+	            margin-top: -2px;
+	            border-radius: 2px;
+	            background-color: $color-2;
+	            transition: background-color 0s 0.15s linear;
+	            &:before, &:after {
+	                position: absolute;
+	                width: 42px;
+	                height: 4px;
+	                border-radius: 2px;
+	                background-color: $color-2;
+	                transition-property: transform;
+	                transition-duration: 0.15s;
+	                transition-timing-function: ease;
+	            }
+	            &:before, &:after {
+	                content: "";
+	                display: block;
+	            }
+	            &:before {
+	                top: 10px;
+	                transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+	            }
+	            &:after {
+	                top: 20px;
+	                transition: top 0.3s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+	            }
+	        }
+	        /*------------------------------------*\
+	            ::When Triggered
+	        \*------------------------------------*/
+	        &.active {
+	            span{
+	                transition-delay: 0.32s;
+	                background-color: transparent;
+	                &:before {
+	                    top: 0;
+	                    transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.15s 0.32s cubic-bezier(0.215, 0.61, 0.355, 1);
+	                    transform: translate3d(0, 10px, 0) rotate(45deg);
+	                }
+	                &:after {
+	                    top: 0;
+	                    transition: top 0.3s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.15s 0.32s cubic-bezier(0.215, 0.61, 0.355, 1);
+	                    transform: translate3d(0, 10px, 0) rotate(-45deg);
+	                }
+	            }
+	            & + .main-head__nav {
+	                transform: translateX(0);
+	            }
+	        }
+	    }
+
+
+
+
 	}
 	@include bp($planetary){
 		&:after{
@@ -194,7 +313,7 @@ svg{
 	}
 }
 /*------------------------------------*\
-    ::skils
+    ::skills
 \*------------------------------------*/
 .skills{
 	&__wrap{
