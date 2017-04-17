@@ -11,7 +11,10 @@
 
     <div class="wrap-all-the-things">
             <header class="main-head">
-                <div class="main-head__inner">
+                <div class="main-head__menu">
+                    <a href="javascript:void(0);" id="js-trigger" class="main-head__trigger" aria-label="Activate navigation">
+                        <span></span>
+                    </a>
                     <nav class="main-head__nav">
                         <a href="#skills">what I know</a>
                         <a href="#experience">what I've done</a>
@@ -19,11 +22,15 @@
                         <a href="#learning">what I'm learning</a>
                         <a href="#contact">contact</a>
                     </nav>
-                    <div class="main-head__intro">
-                        <h2>Hi, I'm Corinne. So glad you made it to my portfolio site!</h2>
-                        <h3>I'm a front-end web engineer who enjoys writing organized code, laughing at cat pictures, and making a usable internet.</h3>
-                        <h4>I'm a quick learner, something else about me here, hi hello this is osmething more that I can fill in content later for this section hello</h4>
-                        <h4>And another paragraph here about why I'm so great and you should hire me please pretty please with ice cream on top.</h4>
+                </div>
+                <div class="main-head__intro">
+                    <div class="main-head__inner">
+                        <div class="main-head__text">
+                            <h2>Hi, I'm Corinne. So glad you made it to my portfolio site!</h2>
+                            <h3>I'm a front-end web engineer who enjoys writing organized code, laughing at cat pictures, and making a usable internet.</h3>
+                            <h4>I'm a quick learner, something else about me here, hi hello this is osmething more that I can fill in content later for this section hello</h4>
+                            <h4>And another paragraph here about why I'm so great and you should hire me please pretty please with ice cream on top.</h4>
+                        </div>
                     </div>
                 </div>
             </header>
@@ -161,7 +168,15 @@
                             what I'm reading
                         </h2>
                         <div class="pocket-feed__wrap">
-                            pock stuff will go here!
+                            <p>
+                                <a href="https://play.google.com/store/books/details?id=rorlAwAAQBAJ" target="_blank">Principles of Object-Oriented JavaScript</a>, Nicholas C. Zakas 
+                            </p>
+                            <p>
+                                <a href="https://www.smashingmagazine.com/2016/12/front-end-performance-checklist-2017-pdf-pages/">Front-end Performance Checklist</a>, Smashing Magazine
+                            </p>
+                            <p>
+                                <a href="http://mrmrs.io/writing/2016/03/24/scalable-css/">CSS and Scalability</a>
+                            </p>
                         </div>
                     </article>
                     <article id="learning" class="main-torso__group skills">
@@ -181,7 +196,7 @@
                 <div class="main-foot__inner">
                     <div id="contact" class="main-foot__contact contact">
                         <div class="contact__blurb">
-                            Please <a href="images/Corinne_Winthrop_Resume.pdf" target="_blank">download my resume</a>, or contact me another way!
+                            Please <a href="images/Corinne_Winthrop_Resume.pdf" target="_blank">download my resume</a>. Let's get in touch!
                         </div>
                         <div class="contact__links">
                             <a href="https://www.linkedin.com/in/corinnewinthrop/" target="_blank" title="LinkedIn">
@@ -209,7 +224,7 @@
                 </div>
             </footer>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <script src="js/main.min.js"></script>
 </body>
 </html>
