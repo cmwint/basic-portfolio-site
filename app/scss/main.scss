@@ -1,7 +1,7 @@
 /*------------------------------------*\
     ::Font
 \*------------------------------------*/
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700');
+/*@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700');*/
 
 /*------------------------------------*\
     ::Variables
@@ -26,7 +26,6 @@ $pad:       0.9375rem;
     @else if $max {
         @media only screen and (max-width: $max) { @content; }
     }
-
 }
 
 /*------------------------------------*\
@@ -75,12 +74,6 @@ svg{
     font-weight: 100;
 }
 /*implement:*/%h1, %h2, %h3, %h4, %h5, %h6 { @extend %h-all; }
-%h1{}
-%h2 {}
-%h3 {}
-%h4 {}
-%h5 {}
-%h6 {}
 /*implement:*/h1{@extend %h1;}h2{@extend %h2;}h3{@extend %h3;}h4{@extend %h4;}h5{@extend %h5;}h6{@extend %h6;}
 
 /*------------------------------------*\
@@ -535,6 +528,7 @@ svg{
 			display: inline-block;
 			margin: 0 0.5em;
 			padding: 5px;
+			cursor: pointer;
 			&:hover{
 				svg{
 					fill: lighten($color-2, 30%);

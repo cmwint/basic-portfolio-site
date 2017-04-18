@@ -31,8 +31,8 @@
                         <div class="main-head__text">
                             <h2>Hi, I'm Corinne. So glad you made it to my portfolio site!</h2>
                             <h3>I'm a front-end web engineer who enjoys writing organized code, laughing at cat pictures, and making a usable internet.</h3>
-                            <h4>I'm a quick learner, something else about me here, hi hello this is osmething more that I can fill in content later for this section hello</h4>
-                            <h4>And another paragraph here about why I'm so great and you should hire me please pretty please with ice cream on top.</h4>
+                            <h4>If there's only one thing you should know about me, it's that I'm a fast learner. I code every day to make that happen.</h4>
+                            <h4>I also like problem solving, keeping an inordinate amount of colorful sticky notes around the peripheral of my computer, and always thinking about the end users who will interact with my code.</h4>
                         </div>
                     </div>
                 </div>
@@ -149,8 +149,8 @@
                                     <p>Gained digital interactive design and development fundamentals from professional developers in the field</p>
                                     <p>Designed sports graphics weekly from a set of data and photos to create data visualizations, while collaborating with veteran sports editors and established writers in the media industry</p>
                                     <div class="portfolio__example">
-                                        <a href="https://codepen.io/cwint/pen/jqdaLZ" target="_blank">News design website</a>
-                                        <a href="https://codepen.io/cwint/pen/jqdaLZ" target="_blank">Data visualizations</a>
+                                        <a href="https://corinne-winthrop-oxnp.squarespace.com/" target="_blank">News design website</a>
+                                        <a href="https://corinne-winthrop-oxnp.squarespace.com/#/new-page-1-2-1-1/" target="_blank">Data visualizations</a>
                                     </div>
                                 </div>
                             </div>
@@ -175,10 +175,10 @@
                                 <a href="https://play.google.com/store/books/details?id=rorlAwAAQBAJ" target="_blank">Principles of Object-Oriented JavaScript</a>, Nicholas C. Zakas 
                             </p>
                             <p>
-                                <a href="https://www.smashingmagazine.com/2016/12/front-end-performance-checklist-2017-pdf-pages/">Front-end Performance Checklist</a>, Smashing Magazine
+                                <a href="https://www.smashingmagazine.com/2016/12/front-end-performance-checklist-2017-pdf-pages/" target="_blank">Front-end Performance Checklist</a>, Smashing Magazine
                             </p>
                             <p>
-                                <a href="http://mrmrs.io/writing/2016/03/24/scalable-css/">CSS and Scalability</a>
+                                <a href="http://mrmrs.io/writing/2016/03/24/scalable-css/" target="_blank">CSS and Scalability</a>
                             </p>
                         </div>
                     </article>
@@ -188,7 +188,7 @@
                         </h2>
                         <div class="skills__wrap">
                             <div class="skills__col">
-                                react, ember, CSS grid layout, 
+                                react, ember, CSS grid layout, CICD, unit testing
                             </div>
                         </div>
                     </article>
