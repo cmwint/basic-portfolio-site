@@ -3,3 +3,4 @@
 
 ## To-dos
 - Configure autoprefixer in gulpfile.js
+- Build PHP contact form in footer

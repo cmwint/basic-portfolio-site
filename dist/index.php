@@ -27,9 +27,9 @@
                     <div class="main-head__inner">
                         <div class="main-head__text">
                             <h2>Hi, I'm Corinne. So glad you made it to my portfolio site!</h2>
-                            <h3>I'm a front-end web engineer who enjoys writing organized code, laughing at cat pictures, and creating a usable internet.</h3>
+                            <h3>I'm a front-end web engineer who enjoys writing organized code, laughing at cat pictures, and making a usable internet.</h3>
                             <h4>If there's only one thing you should know about me, it's that I'm a fast learner. I code every day to make that happen.</h4>
-                            <h4>I also like solving problem</h4>
+                            <h4>I also like problem solving, keeping an inordinate amount of colorful sticky notes around the peripheral of my computer screen, and always thinking about the end users who will interact with my code.</h4>
                         </div>
                     </div>
                 </div>
