@@ -399,53 +399,6 @@ svg{
 			&:hover{
 				background-color: $color-2;
 			}
-			&.march-madness{
-				position: relative;
-				&:before{
-					content: '';
-					position: absolute;
-					bottom: 100%;
-					left: 0;
-					right: 0;
-					display: block;
-					width: 0; 
-					height: 0; 
-					margin: auto;
-					border-left: 12px solid transparent;
-					border-right: 12px solid transparent;
-					border-top: 12px solid $color-2;
-					opacity: 0;
-					transform: translateY(15px);
-					transition: 300ms;
-				}
-				&:after{
-					content: 'My coworker thought he could beat me in the office March Madness bracket. Here\'s how it turned out.';
-					position: absolute;
-					bottom: calc(100% + 10px);
-					left: -50%;
-					right: -50%;
-					display: block;
-					width: 250px;
-					margin: 0 auto;
-					padding: 8px;
-					text-align: center;
-					font-size: 86%;
-					opacity: 0;
-					transform: translateY(15px);
-					z-index: -1;
-					transition: opacity 300ms 0ms, transform 300ms 0ms, z-index 300ms 300ms;
-					background-color: $color-2;
-				}
-				&:hover{
-					&:before,
-					&:after{
-						z-index: 20;
-						opacity: 1;
-						transform: translateY(0px);
-						transition: opacity 300ms 300ms, transform 300ms 300ms, z-index 300ms 0ms;
-					}
-				}
-			}
 		}
 	}
 	@include bp($interstellar) {
@@ -480,13 +433,29 @@ svg{
 /*------------------------------------*\
     ::pocket feed
 \*------------------------------------*/
-.pocket-feed{
-	&__wrap{
-		a{
+.pocket-feed {
+	&__wrap {
+		p {
+			margin-bottom: 0;
+		}
+		a {
 			color: $color-2;
 			transition: 200ms;
-			&:hover{
+			&:hover{ 
 				color: $color-1;
+			}
+		}
+	}
+	span {
+		color: black;
+		font-size: 14px;
+		font-style: italic;
+		font-weight: 300;
+		a {
+			color: #449363;
+			transition: .2s;
+			&:hover {
+				color: #31634a;
 			}
 		}
 	}

@@ -314,53 +314,6 @@ h1, h2, h3, h4, h5, h6 {
   transition: 200ms; }
   .portfolio__example a:hover {
     background-color: #449363; }
-  .portfolio__example a.march-madness {
-    position: relative; }
-    .portfolio__example a.march-madness:before {
-      content: '';
-      position: absolute;
-      bottom: 100%;
-      left: 0;
-      right: 0;
-      display: block;
-      width: 0;
-      height: 0;
-      margin: auto;
-      border-left: 12px solid transparent;
-      border-right: 12px solid transparent;
-      border-top: 12px solid #449363;
-      opacity: 0;
-      -webkit-transform: translateY(15px);
-              transform: translateY(15px);
-      transition: 300ms; }
-    .portfolio__example a.march-madness:after {
-      content: 'My coworker thought he could beat me in the office March Madness bracket. Here\'s how it turned out.';
-      position: absolute;
-      bottom: calc(100% + 10px);
-      left: -50%;
-      right: -50%;
-      display: block;
-      width: 250px;
-      margin: 0 auto;
-      padding: 8px;
-      text-align: center;
-      font-size: 86%;
-      opacity: 0;
-      -webkit-transform: translateY(15px);
-              transform: translateY(15px);
-      z-index: -1;
-      transition: opacity 300ms 0ms, z-index 300ms 300ms, -webkit-transform 300ms 0ms;
-      transition: opacity 300ms 0ms, transform 300ms 0ms, z-index 300ms 300ms;
-      transition: opacity 300ms 0ms, transform 300ms 0ms, z-index 300ms 300ms, -webkit-transform 300ms 0ms;
-      background-color: #449363; }
-    .portfolio__example a.march-madness:hover:before, .portfolio__example a.march-madness:hover:after {
-      z-index: 20;
-      opacity: 1;
-      -webkit-transform: translateY(0px);
-              transform: translateY(0px);
-      transition: opacity 300ms 300ms, z-index 300ms 0ms, -webkit-transform 300ms 300ms;
-      transition: opacity 300ms 300ms, transform 300ms 300ms, z-index 300ms 0ms;
-      transition: opacity 300ms 300ms, transform 300ms 300ms, z-index 300ms 0ms, -webkit-transform 300ms 300ms; }
 
 @media only screen and (max-width: 800px) {
   .portfolio__single {
@@ -382,11 +335,25 @@ h1, h2, h3, h4, h5, h6 {
 
 /*------------------------------------*    ::pocket feed
 \*------------------------------------*/
+.pocket-feed__wrap p {
+  margin-bottom: 0; }
+
 .pocket-feed__wrap a {
   color: #449363;
   transition: 200ms; }
   .pocket-feed__wrap a:hover {
     color: #31634A; }
+
+.pocket-feed span {
+  color: black;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 300; }
+  .pocket-feed span a {
+    color: #449363;
+    transition: .2s; }
+    .pocket-feed span a:hover {
+      color: #31634a; }
 
 /*------------------------------------*    ::footer
 \*------------------------------------*/
